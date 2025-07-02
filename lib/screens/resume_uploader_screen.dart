@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:resume_analyzer/screens/upload%20state.dart';
+import 'package:resume_analyzer/screens/upload_state.dart';
 
 class ResumeUploaderScreen extends StatefulWidget {
   const ResumeUploaderScreen({super.key});
@@ -127,7 +127,8 @@ class _ResumeUploaderScreenState extends State<ResumeUploaderScreen> {
             _jobDetailsController.text,
           );
 
-          if (success && context.mounted) {
+          if (!mounted) return;
+          if (success) {
             Navigator.pushNamed(context, '/results');
           }
         },

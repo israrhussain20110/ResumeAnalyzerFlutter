@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:logging/logging.dart';
 import 'package:provider/provider.dart';
-import 'package:resume_analyzer/screens/upload%20state.dart';
+import 'package:resume_analyzer/screens/upload_state.dart';
 
 class AnalysisResultScreen extends StatelessWidget {
   AnalysisResultScreen({super.key});
 
-  static final _log = Logger('AnalysisResultScreen');
   final NumberFormat _percentFormat = NumberFormat.percentPattern();
 
   @override
